@@ -9,7 +9,7 @@
 	
 	<!-- HEADER -->
 
-	<h4 style="margin-left:25px; padding-bottom:10px">Choose your settings:</h4>
+	<h4 style="margin-left:25px; padding-bottom:10px">Choose a shadow:</h4>
 	
 	<!-- TABLE -->
 	<table>
@@ -54,16 +54,17 @@
 					/* OPTION */
 					if (option == "test") {
 						if (dictionary[option] == 0) {
-		        			$("#" + option).html('0');
+		        			$("#" + option).html('Red');
 		        		} else if (dictionary[option] == 1) {
-		        			$("#" + option).html('1');
+		        			$("#" + option).html('Orange');
 		        		} else if (dictionary[option] == 2) {
-		        			$("#" + option).html('2');
+		        			$("#" + option).html('Yellow');
 		        		} else if (dictionary[option] == 3) {
-		        			$("#" + option).html('3');
+		        			$("#" + option).html('Green');
 		        		} else if (dictionary[option] == 4) {
-		        			$("#" + option).html('4');
-		        		}
+		        			$("#" + option).html('Blue');
+		        		} else if (dictionary[option] == 5) {
+		        			$("#" + option).html('Violet');
 					}
 				
 		        }
@@ -82,15 +83,17 @@
 		    	/* DATE FORMAT */
 		        if ($(this).attr("id") == "test") {
 		        	if (dictionary[$(this).attr("id")] == 0) {
-		        		$(this).html('0');
+		        		$(this).html('Red');
 		        	} else if (dictionary[$(this).attr("id")] == 1) {
-		        		$(this).html('1');
+		        		$(this).html('Orange');
 		        	} else if (dictionary[$(this).attr("id")] == 2) {
-		        		$(this).html('2');
+		        		$(this).html('Yellow');
 		        	} else if (dictionary[$(this).attr("id")] == 3) {
-		        		$(this).html('3');
+		        		$(this).html('Green');
 		        	} else if (dictionary[$(this).attr("id")] == 4) {
-		        		$(this).html('4');
+		        		$(this).html('Blue');
+		        	} else if (dictionary[$(this).attr("id")] == 5) {
+		        		$(this).html('Violet');
 		        	}
 		        }
 		    });
