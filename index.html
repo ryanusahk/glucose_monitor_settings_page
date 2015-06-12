@@ -3,12 +3,13 @@
 </head>
 <body>
 	<select id="dropdown">
-	  <option value="Red">Red</option>
-	  <option value="Orange">Orange</option>
-	  <option value="Yellow">Yellow</option>
-	  <option value="Green">Green</option>
-	  <option value="Blue">Blue</option>
-	  <option value="Purple">Purple</option>
+	  <option value="1">Red</option>
+	  <option value="2">Orange</option>
+	  <option value="3">Yellow</option>
+	  <option value="4">Green</option>
+	  <option value="5">Blue</option>
+	  <option value="6">Purple</option>
+	  <option value="7">Pink</option>  
 	</select>
 	<button type="button" onclick="submit();">Save</button>
 	<script>
@@ -20,7 +21,7 @@
 		}
 		function submit(){
 			var color = document.getElementById("dropdown").value;
-			var location = "pebblejs://close#";
+			var location = "pebblejs://close#" + color;
 			document.location.href = location;
 		}
 	</script>
