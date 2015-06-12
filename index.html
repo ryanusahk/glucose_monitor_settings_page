@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 	<title>Settings</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -103,5 +103,29 @@
 		    });
 		});
 	</script>
+</body>
+</html> -->
+
+<html>
+<head>
+       
+</head>
+<body>
+        <select id="dropdown" onchange="returnColor();">
+          <option value="Red">Red</option>
+          <option value="Orange">Orange</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+          <option value="Purple">Purple</option>
+        </select>
+        <script>
+                function returnColor(){
+                        var color = document.getElementById("dropdown").value;
+                        return color;
+                }
+        </script>
+ 
+       
 </body>
 </html>
