@@ -13,15 +13,18 @@
 	</select>
 	<button type="button" onclick="submit();">Save</button>
 	<script>
-		function returnColor(){
-			var color = document.getElementById("dropdown").value;
-			alert(color);
-			return color;
-			// alert("adfjlksa");
-		}
+
+	var dictionary;
+	dictionary = JSON.parse(localStorage["dictionary"]);
+		
 		function submit(){
 			var color = document.getElementById("dropdown").value;
-			var location = "pebblejs://close#" + color;
+			dictionary[0] = color;
+			
+			localStorage["dictionary"] = JSON.stringify(dictionary);
+
+			var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(dictionary));
+
 			document.location.href = location;
 		}
 	</script>
