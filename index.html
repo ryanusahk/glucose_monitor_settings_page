@@ -15,7 +15,7 @@
 	<script>
 		function submit(){
 			var color = document.getElementById("dropdown").value;
-			var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(color));
+			var location = "pebblejs://close#" + color;
 
 			document.location.href = location;
 		}
