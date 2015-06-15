@@ -1,8 +1,15 @@
 <html>
 <head>
+	<title>Settings</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<select id="dropdown">
+
+	<h4 style="margin-left:25px; padding-bottom:10px">Choose a color:</h4>
+	
+	<select id="dropdown" class="btn btn-default dropdown-toggle" style="width:100px; margin-left:20px;">
 	  <option value="0">Red</option>
 	  <option value="1">Orange</option>
 	  <option value="2">Yellow</option>
@@ -11,11 +18,15 @@
 	  <option value="5">Purple</option>
 	  <option value="6">Pink</option>  
 	</select>
-	<select id="dropdown2">
+	<br>
+	<select id="dropdown2" class="btn btn-default dropdown-toggle" style="width:100px; margin-left:20px; margin-top:20px">
 	  <option value="0">Black</option>
 	  <option value="1">White</option>
 	</select>
-	<button type="button" onclick="submit();">Save</button>
+
+	<p style="text-align:center;">
+		<button type="button" class="submit btn btn-success" onclick="submit();">Save</button>
+	</p>
 	<script>
 		function submit(){
 			var color = document.getElementById("dropdown").value;
