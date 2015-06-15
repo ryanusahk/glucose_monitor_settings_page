@@ -13,22 +13,9 @@
 	</select>
 	<button type="button" onclick="submit();">Save</button>
 	<script>
-
-		var dictionary;
-		try {
-			dictionary = JSON.parse(localStorage["dictionary"]);
-		}
-		catch(e) {
-			dictionary = {'test':0};
-		}
-	
 		function submit(){
 			var color = document.getElementById("dropdown").value;
-
-	        dictionary[0] = color;
-	        localStorage["dictionary"] = JSON.stringify(dictionary);
-
-			var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(dictionary));
+			var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(color));
 
 			document.location.href = location;
 		}
