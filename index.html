@@ -3,25 +3,30 @@
 </head>
 <body>
 	<select id="dropdown">
-	  <option value="1">Red</option>
-	  <option value="2">Orange</option>
-	  <option value="3">Yellow</option>
-	  <option value="4">Green</option>
-	  <option value="5">Blue</option>
-	  <option value="6">Purple</option>
-	  <option value="7">Pink</option>  
+	  <option value="0">Red</option>
+	  <option value="1">Orange</option>
+	  <option value="2">Yellow</option>
+	  <option value="3">Green</option>
+	  <option value="4">Blue</option>
+	  <option value="5">Purple</option>
+	  <option value="6">Pink</option>  
 	</select>
 	<button type="button" onclick="submit();">Save</button>
 	<script>
 
-	var dictionary;
-	dictionary = JSON.parse(localStorage["dictionary"]);
-		
+		var dictionary;
+		try {
+			dictionary = JSON.parse(localStorage["dictionary"]);
+		}
+		catch(e) {
+			dictionary = {'test':0};
+		}
+	
 		function submit(){
 			var color = document.getElementById("dropdown").value;
-			dictionary[0] = color;
-			
-			localStorage["dictionary"] = JSON.stringify(dictionary);
+
+	        dictionary[0] = color;
+	        localStorage["dictionary"] = JSON.stringify(dictionary);
 
 			var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(dictionary));
 
