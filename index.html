@@ -11,11 +11,16 @@
 	  <option value="5">Purple</option>
 	  <option value="6">Pink</option>  
 	</select>
+	<select id="dropdown2">
+	  <option value="0">Black</option>
+	  <option value="1">White</option>
+	</select>
 	<button type="button" onclick="submit();">Save</button>
 	<script>
 		function submit(){
 			var color = document.getElementById("dropdown").value;
-			var location = "pebblejs://close#" + color;
+			var back = document.getElementById("dropdown2").value;
+			var location = "pebblejs://close#" + color + back;
 
 			document.location.href = location;
 		}
